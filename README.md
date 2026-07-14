@@ -1,6 +1,9 @@
 # Overview
 This is the source code for the Iron Nest mod MapDrawer. This mod allows you to save and load whatever you've drawn on the in-game tactical map. There is currently no GUI, nor do I currently have any plans to implement one, the mod is controlled solely through some hardbound keybinds.
 
+## Known Issues
+Currently lines drawn by the mod cannot be manually deleted. The only way to remove them is all at once either via the 'clear map drawings' button (which clears everything) or via pressing Numpad 9 to clear only the lines drawn by the mod. I am completely in the dark as to what could be causing this beyond I'm probably missing some initialization call or something when spawning the line prefabs.
+
 ## Keybinds
 **Numpad 9**: Clear lines drawn by the mod. This does not include manually drawn lines.
 
