@@ -2,7 +2,7 @@
 using UnityEngine.InputSystem;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(MapDrawer.Core), "MapDrawer", "1.1.0", "Wrothmonk", null)]
+[assembly: MelonInfo(typeof(MapDrawer.Core), "MapDrawer", "1.2.0", "Wrothmonk", null)]
 
 namespace MapDrawer
 {
@@ -35,6 +35,10 @@ namespace MapDrawer
 				CurrImage();}
 			if (Keyboard.current.numpad4Key.wasPressedThisFrame){
 				PrevImage();}
+			if (Keyboard.current.numpad3Key.wasPressedThisFrame){
+				DrawHelper.SetLabelVisibility(true);}
+			if (Keyboard.current.numpad2Key.wasPressedThisFrame){
+				DrawHelper.SetLabelVisibility(false);}
 			if (Keyboard.current.numpad1Key.wasPressedThisFrame){
 				IOHelper.ConvertJson();}
 		}

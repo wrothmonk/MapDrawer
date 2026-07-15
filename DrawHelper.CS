@@ -1,4 +1,5 @@
 using Il2Cpp;
+using Il2CppHeathen.SteamworksIntegration.API;
 using MelonLoader;
 using System;
 using System.Globalization;
@@ -180,6 +181,18 @@ namespace MapDrawer
 			}
 
 			return results;
+		}
+		public static void SetLabelVisibility(bool visible)
+		{
+			var prefabs = Resources.FindObjectsOfTypeAll<GameObject>()
+				.Where(o => o.name.Contains("MapMarker") && o.name.Contains("Clone"))
+				.ToList();
+			
+			foreach (var p in prefabs)
+			{
+				var line = p.GetComponent<MapMarkerLineUI>();
+				line?.SetLabelsVisible(visible);
+			}
 		}
 	}
 }

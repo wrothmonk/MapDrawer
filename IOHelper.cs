@@ -31,7 +31,7 @@ namespace MapDrawer
 		public static string gallery = Path.Combine(dir, "gallery");
 		public static List<String> galleryFiles = new List<String>();
 		private static int saveIndex = 0; // Next index to write to for saving drawings
-		private static UInt16[] saveVersion = {1, 1, 0};
+		private static readonly UInt16[] saveVersion = [1, 2, 0];
 
 		public static void Init()
 		{
