@@ -4,8 +4,6 @@ This is the source code for the Iron Nest mod MapDrawer. This mod allows you to 
 ## Known Issues
 Currently lines drawn by the mod cannot be manually deleted. The only way to remove them is all at once either via the 'clear map drawings' button (which clears everything) or via pressing Numpad 9 to clear only the lines drawn by the mod. I am completely in the dark as to what could be causing this beyond I'm probably missing some initialization call or something when spawning the line prefabs.
 
-I also entirely forgot about compass/circle markers as the mod I pulled the drawing code from didn't support them either, and they aren't commonly used in map art. Will be fixing this in the next update.
-
 ## Keybinds
 **Numpad 9**: Clear lines drawn by the mod. This does not include manually drawn lines.
 
@@ -45,10 +43,12 @@ Currently the mod only loads .draw files that have been created by the mod itsel
 
 `"lines"` is a list of simplified LineData objects that contain three fields:
   
-  `"color"` should be one of `"white"`, `"yellow"`, or `"red"`. Unrecognized color strings will default to `"white"`.
+  `"color"` should be one of `"white"`, `"yellow"`, `"red"`, or `"disc"`. Unrecognized color strings will default to `"white"`.
   
   `"origin"` is the x and y coordinates of the start of the line.
   
   `"target"` is the x and y coordinates of where the line ends.
 
 Coordinates on the tactical map go from (0, 0) at the bottom left to (20, 10) at the top right. The bottom edge is towards the firing calculator, and the left edge towards the front of the nest. Integer values correspond to the edges of each large grid square, with floating point values falling inbetween.
+
+For `"disc"` markers, the radius of the circle is determined by how far away the `"target"` coordinates are from `"origin"`.
