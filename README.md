@@ -4,6 +4,8 @@ This is the source code for the Iron Nest mod MapDrawer. This mod allows you to 
 ## Known Issues
 Currently lines drawn by the mod cannot be manually deleted. The only way to remove them is all at once either via the 'clear map drawings' button (which clears everything) or via pressing Numpad 9 to clear only the lines drawn by the mod. I am completely in the dark as to what could be causing this beyond I'm probably missing some initialization call or something when spawning the line prefabs.
 
+I also entirely forgot about compass/circle markers as the mod I pulled the drawing code from didn't support them either, and they aren't commonly used in map art. Will be fixing this in the next update.
+
 ## Keybinds
 **Numpad 9**: Clear lines drawn by the mod. This does not include manually drawn lines.
 
