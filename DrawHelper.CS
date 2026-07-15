@@ -29,6 +29,7 @@ namespace MapDrawer
 		private static GameObject _redPrefab;
 		private static GameObject _yellowPrefab;
 		private static GameObject _whitePrefab;
+		private static GameObject _discPrefab;
 		private static RectTransform _mapRect;
 		private static List<GameObject> _drawnLines = new List<GameObject>();
 
@@ -62,6 +63,10 @@ namespace MapDrawer
 				{
 					_whitePrefab = p;
 					MelonLogger.Msg($"White found? {p.name}");
+				} else if (p.name.Contains("DiscCompass"))
+				{
+					_discPrefab = p;
+					MelonLogger.Msg($"Disc found? {p.name}");
 				} else if (p.name.Contains("MapMarkers"))
 				{
 					_mapRect = p.GetComponent<RectTransform>();
@@ -84,6 +89,9 @@ namespace MapDrawer
 					break;
 				case "yellow":
 					prefab = _yellowPrefab;
+					break;
+				case "disc":
+					prefab = _discPrefab;
 					break;
 				default:
 					break;
@@ -159,6 +167,9 @@ namespace MapDrawer
 				} else if (p.name.Contains("Yellow"))
 				{
 					color = "yellow";
+				} else if (p.name.Contains("DiscCompass"))
+				{
+					color = "disc";
 				}
 
 				var newLine = p.GetComponent<MapMarkerLineUI>();

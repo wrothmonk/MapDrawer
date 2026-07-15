@@ -31,7 +31,7 @@ namespace MapDrawer
 		public static string gallery = Path.Combine(dir, "gallery");
 		public static List<String> galleryFiles = new List<String>();
 		private static int saveIndex = 0; // Next index to write to for saving drawings
-		private static UInt16[] saveVersion = {1, 0, 0};
+		private static UInt16[] saveVersion = {1, 1, 0};
 
 		public static void Init()
 		{
@@ -57,6 +57,7 @@ namespace MapDrawer
 				Directory.CreateDirectory(gallery);
 				MelonLogger.Msg($"Created gallery folder, put draw files for viewing here: {gallery}");
 			} else {
+				galleryFiles.Clear();
 				foreach (var f in Directory.GetFiles(gallery))
 				{
 					if (".draw" == Path.GetExtension(f).ToLowerInvariant())

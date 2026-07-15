@@ -2,7 +2,7 @@
 using UnityEngine.InputSystem;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(MapDrawer.Core), "MapDrawer", "1.0.0", "Wrothmonk", null)]
+[assembly: MelonInfo(typeof(MapDrawer.Core), "MapDrawer", "1.1.0", "Wrothmonk", null)]
 
 namespace MapDrawer
 {
