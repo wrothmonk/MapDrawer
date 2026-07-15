@@ -28,7 +28,7 @@ Currently the mod only loads .draw files that have been created by the mod itsel
 ```
 {
 	"header":"MapDrawer",
-	"version":[1, 0, 0],
+	"version":[1, 2, 0],
 	"lines":[
 		{
 			"color":"white",
