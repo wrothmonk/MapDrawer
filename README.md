@@ -17,6 +17,10 @@ Currently lines drawn by the mod cannot be manually deleted. The only way to rem
 
 **Numpad 4**: Cycles to the previous .draw file in the gallery folder and draws it on the map
 
+**Numpad 3**: Sets all line labels to be invisible (the text for angle and distance)
+
+**Numpad 2**: Sets all line labels to be visible
+
 **Numpad 1**: Iterates through all .json files in the gallery folder and attempts to convert them to .draw files
 
 ## Advanced Usage
@@ -24,7 +28,7 @@ Currently the mod only loads .draw files that have been created by the mod itsel
 ```
 {
 	"header":"MapDrawer",
-	"version":[1, 1, 0],
+	"version":[1, 0, 0],
 	"lines":[
 		{
 			"color":"white",
@@ -35,6 +39,11 @@ Currently the mod only loads .draw files that have been created by the mod itsel
 			"color":"yellow",
 			"origin":{"x":0, "y":10},
 			"target":{"x":20, "y":0}
+		},
+		{
+			"color":"disc",
+			"origin":{"x":10, "y":5},
+			"target":{"x":12, "y":5}
 		}
 	]
 }
